@@ -1,0 +1,134 @@
+/* Importa Playfair Display para títulos e Montserrat para o corpo do texto */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;700&display=swap');
+
+/* Estilo global básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, #root {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configuração de variáveis de cor para modo claro e escuro */
+:root {
+  --background-color: #f8f9fa; /* Modo claro */
+  --text-color: #333;
+  --button-bg: #999AD2;
+  --button-bg-hover: #B8B1DB;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1e1e1e; /* Modo escuro */
+    --text-color: #e0e0e0;
+    --button-bg: #666;
+    --button-bg-hover: #888;
+  }
+}
+
+/* Contêiner principal para centralizar o conteúdo */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Aplica Playfair Display aos títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+/* Contêiner de navegação */
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.navbar-container a {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-container a:hover {
+  color: #999AD2;
+}
+
+/* Estilo para botões */
+button, .buyButton {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  background-color: var(--button-bg);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .buyButton:hover {
+  background-color: var(--button-bg-hover);
+}
+
+/* Card estilizado para modo claro e escuro */
+.card {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+  .logo {
+    height: 4em;
+    padding: 1em;
+  }
+}

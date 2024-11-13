@@ -1,0 +1,268 @@
+/* CABEÇALHO */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 100px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+/* Logo */
+.logo {
+    height: 70px;
+    width: auto;
+}
+
+/* Logo Container */
+.logoContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Navbar */
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbarLink {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.navbarLinkHover:hover {
+    color: #B8B1DB;
+}
+
+/* Ícones à direita */
+.iconContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.iconContainerImg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Menu Ícone (Hambúrguer) */
+.menuIcon {
+    display: none; /* Escondido em telas grandes */
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Barra de Pesquisa */
+.searchForm {
+    display: flex;
+    align-items: center;
+}
+
+.searchInput {
+    width: 150px;
+    padding: 5px 10px;
+    border: 1px solid #B8B1DB;
+    border-radius: 5px;
+    transition: width 0.4s ease-in-out;
+}
+
+.searchInputFocus:focus {
+    width: 200px;
+    border-color: #999AD2;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menuIcon {
+        display: block; /* Exibe o ícone em telas menores */
+    }
+
+    .navbarContainer {
+        display: none; /* Esconde a navbar por padrão em telas menores */
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .navbarContainerOpen {
+        display: flex; /* Exibe a navbar quando clicada */
+    }
+
+    .iconContainer {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Esconder o menu hambúrguer em telas grandes */
+    .menuIcon {
+        display: none;
+    }
+
+    /* Exibir a navbar por padrão em telas grandes */
+    .navbarContainer {
+        display: flex;
+    }
+}
+
+/* Promo Section */
+.promoSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+/* Background Image */
+.backgroundImage {
+    background-image: url('../assets/fundo1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+}
+
+/* Overlay */
+.promoSectionBefore::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    z-index: -1;
+}
+
+/* Promo Content */
+.promoContent {
+    text-align: left;
+    margin: 0 auto;
+    word-wrap: break-word;
+}
+
+.promoTitle {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: left;
+}
+
+.promoCopy {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: left;
+}
+
+.promoLinkGroup {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.promoLink {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #999AD2;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.promoLinkHover:hover {
+    background-color: #B8B1DB;
+}
+
+/* Products Section */
+.productsSection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.productCard {
+    width: 200px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.productCardImg {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.productCardTitle {
+    margin-bottom: 5px;
+}
+
+.productCardPrice {
+    margin-bottom: 15px;
+}
+
+.buyButton {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #999AD2;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buyButtonHover:hover {
+    background-color: #B8B1DB;
+}
+
+/* Estilo para a seção de título */
+.sectionTitle {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.sectionTitle h2 {
+    font-size: 2.5em;
+    color: #999AD2;
+    margin: 0;
+}

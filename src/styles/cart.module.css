@@ -1,0 +1,148 @@
+/* CSS no Cart.module.css */
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* Navbar */
+.navbarContainer {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+/* Carrinho */
+.cartContainer {
+    width: 100%;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cartContainer h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.cartItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    background-color: #fafafa;
+    border-radius: 10px;
+}
+
+.productImage {
+    height: 80px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.itemDetails {
+    flex-grow: 1;
+    margin-left: 20px;
+    color: #666;
+}
+
+.itemDetails h3 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.quantityInput {
+    width: 50px;
+    padding: 5px;
+    margin-left: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.removeButton {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4d4d;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.removeButton:hover {
+    background-color: #ff1a1a;
+}
+
+/* Total e Finalizar Compra */
+.total {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.total h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.promoLink {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #999AD2;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.promoLink:hover {
+    background-color: #B8B1DB;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cartItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .itemDetails {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .removeButton {
+        align-self: flex-start;
+        margin-top: 10px;
+    }
+}
